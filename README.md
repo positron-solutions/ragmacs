@@ -108,3 +108,31 @@ This confuses LLMs and leads to worse outcomes.  Unnecessary inputs are like
 injecting static electricity into the brain.  If at all possible, we want
 dynamic selections of tools for the specific task at hand and to make all tool
 descriptions shorter and context appropriate.
+
+## Recommended Lines of Further Development
+
+Currently most people will select tools by hand and likely leave them the same
+for the duration of a chat.  However, related to the context rot problem above,
+having all tools in scope and using long, generic prompts has been shown to
+damage the coherence of LLMs.  We need to focus and change our focus during
+multiple steps!
+
+### A Napkin Sketch of a Computation "Stack"
+
+Just like a program, we want to compose several focused operations and to
+introduce flow control.
+
+- Each "frame" of the stack would hold context, which can be included or not
+  dynamically on demand.
+- Each "call" may vary the prompt and tools available.
+- Some "calls" would compress the context down to relevant facts rather than
+  only appending forever.
+- The logic to select next calls could itself be left up to another prompt, which would consume summary metadata from the stack.
+- Branching, concurrency, and recurrence are just further applications of having
+  the basic mechanics done.
+  
+This style of usage may be the foundation of composing stateful commands behind
+keystrokes with extra prompt interjection being part of our key-binding command
+language.  I'm currently super busy doing full-stack Rust on
+[prizeforge.com](https://prizeforge.com), so good luck!
+
