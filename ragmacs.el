@@ -2,7 +2,7 @@
 
 ;; Author: Positron <contact@positron.solutions>
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "32.0") (orderless "1.5") (gptel "0.9.8.5"))
+;; Package-Requires: ((emacs "31.0") (orderless "1.5") (gptel "0.9.8.5"))
 ;; Maintainer: Positron <contact@positron.solutions>
 ;; URL: https://github.com/positron-solutions/ragmacs
 ;; Keywords: convenience
